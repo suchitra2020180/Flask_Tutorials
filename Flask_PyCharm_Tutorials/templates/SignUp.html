@@ -1,0 +1,18 @@
+{% extends "base1.html" %}
+{% block content %}
+<!---div class="jumbotron" -- is not working-->
+<div class="container-fluid bg-dark text-light p-5">
+  <h1> Welcome to the sign up page!</h1>
+  <h3> Fill out the form.Notice that we are not saving anything here</h3>
+
+  <form action="{{url_for('thankyou')}}" >
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname"><br><br>
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lname"><br><br>
+    <input type="submit" value="Submit Form">
+  </form>
+</div>
+
+
+{% endblock %}

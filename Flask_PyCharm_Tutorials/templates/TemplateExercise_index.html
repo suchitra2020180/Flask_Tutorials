@@ -1,0 +1,21 @@
+{% extends 'TemplateExercise_base.html' %}
+{% block content %}
+<div class="mt-4 p-5 bg-primary text-white rounded">
+    <h2> Welcome to our Website!!</h2>
+    <h3> Lets check if your username is Secure</h3>
+    <h3> <i>Fill out the form below with a user name that has these 3 constraints</i></h3>
+    <ul>
+        <li>Must have an upper case letter somewhere</li>
+        <li>Must have an lower case letter somewhere</li>
+        <li>Must have a number in the end </li>
+        <li>Must have a symbol</li>
+    </ul>
+    <form action="{{url_for('checkusername')}}">
+        <label for="username">User_name:</label>
+        <input id="username" type="text" name="username">
+        <input type="submit" name="Submit Form">
+    </form>
+
+</div>
+
+{% endblock %}

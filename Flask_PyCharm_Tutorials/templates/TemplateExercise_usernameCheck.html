@@ -1,0 +1,26 @@
+{% extends 'TemplateExercise_base.html'%}
+{% block content %}
+<div class="container">
+    <h1> Provided user name: {{my_input}}</h1>
+    <h2> Let's check you secure your username is :</h2>
+    {% if my_report %} <!---if report is true-->
+        <p> Your user name passed all checks!!</p>
+        <p>  Your username is secure</p>
+    {% else %}
+    <!-------------checking different condition--->
+        <ul>
+            {% if not my_lowerletter %}
+                <li>You did not use a lower case letter</li>
+            {% endif %}
+            {% if not my_upperletter %}
+                <li>You did not use a upper case letter</li>
+            {% endif %}
+            {% if not my_num %}
+                <li>You did not use a number at the end</li>
+            {% endif %}
+        </ul>
+    {% endif %}
+</div>
+
+
+{% endblock %}
