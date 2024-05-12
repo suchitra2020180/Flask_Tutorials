@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <p>
+    {% if breed %}
+    The breed you entered is {{breed}}
+    Update it in the form below:
+    {% else %}
+    Please enter your breed
+    {% endif %}
+
+  </p>
+
+  <!----------Create Forms--------->
+  <form method="POST">
+    <!-----#This is for hidden security feature--->
+    {{ form.hidden_tag() }}
+      <!---these are attributes of a class-->
+    {{form.breed.label}}{{form.breed()}}
+    {{form.submit()}}
+
+  </form>
+</body>
+</html>
+

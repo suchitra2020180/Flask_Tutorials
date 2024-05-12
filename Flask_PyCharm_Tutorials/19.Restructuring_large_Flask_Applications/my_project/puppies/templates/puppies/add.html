@@ -1,0 +1,16 @@
+
+{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid bg-dark text-light p-5">
+ <h1> Add a anew owner</h1>
+ <p> Add a new owner too our database!!</p>
+ <form method="POST">
+   {{form.hidden_tag()}}
+   {{form.name.label}}{{form.name()}}<br>
+   {{form.pup_id.label}}{{form.pup_id()}}<br>
+   {{form.submit()}}
+ </form>
+</div>
+
+
+{% endblock %}

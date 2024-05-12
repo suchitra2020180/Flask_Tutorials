@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> <em>Welcome to the survey Page!!</em></h1>
+<form method="POST">
+  {{form.hidden_tag()}}
+  {{form.name.label}}  {{form.name}}
+  <br>
+  {{form.Agreed.label}}  {{form.Agreed}}
+  <br>
+  {{form.Food_choice.label}} {{form.Food_choice}}
+  <br>
+  {{form.mood.label}}  {{form.mood}}
+  <br>
+  <p> Any other feedback?</p>
+  <br>
+  {{form.Feedback.label}}
+  <br>
+  {{form.Feedback}}
+  <br>
+  {{form.submit()}}
+</form>
+
+</body>
+</html>
